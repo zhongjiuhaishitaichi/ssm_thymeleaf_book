@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.book.mapper.BookMapper">
+    <!--        List<Book> getBookList();-->
+    <select id="getBookList" resultType="Book">
+        select * from t_book
+    </select>
+<!--            Book getBookById(@Param("id") Integer id);-->
+    <select id="getBookById" resultType="Book">
+        select * from t_book where id=#{id}
+    </select>
+
+    <!--           void deleteBookById(@Param("id") Integer id);-->
+    <delete id="deleteBookById">
+        delete from t_book where id=#{id}
+    </delete>
+<!--        void addBook(Book book);-->
+    <insert id="addBook">
+        insert into t_book values(0,#{bookImg},#{bookName},#{price},#{author},#{saleCount},#{bookCount})
+    </insert>
+</mapper>

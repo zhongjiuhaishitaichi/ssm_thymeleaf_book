@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/static/css/minireset.css}" />
+    <link rel="stylesheet" th:href="@{/static/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/static/css/cart.css}" />
+    <link rel="stylesheet" th:href="@{/static/css/bookManger.css}" />
+    <link rel="stylesheet" th:href="@{/static/css/index_work.css}">
+  </head>
+  <body>
+    <div class="header">
+      <div class="w">
+        <div class="header-left">
+          <a href="index.html">
+            <img src="../../static/img/logo.gif" alt=""
+          /></a>
+          <h1>图书管理系统</h1>
+        </div>
+        <div class="header-right">
+          <a th:href="@{/bookManage}" class="order">图书管理</a>
+          <a th:href="@{/orderManage}" class="destory">订单管理</a>
+          <a th:href="@{/index}" class="gohome">返回商城</a>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="w">
+        <div class="add">
+          <a th:href="@{/bookEdit}">添加图书</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>图片</th>
+              <th>商品名称</th>
+              <th>价格</th>
+              <th>作者</th>
+              <th>销量</th>
+              <th>库存</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="book:${page.list}" th:object="${book}">
+              <td><img th:src="@{|/static/uploads/*{bookImg}|}"/></td>
+              <td th:text="*{bookName}">活着</td>
+              <td th:text="*{price}">100.00</td>
+              <td th:text="*{author}">余华</td>
+              <td th:text="*{saleCount}">200</td>
+              <td th:text="*{bookCount}">400</td>
+              <td>
+               <a th:href="@{'/deleteOne/'+${book.id}}" class="del">删除</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <table>
+      <div style="text-align: center;font:bold 20px 宋体;background-color:darkcyan">
+        <a th:if="${page.hasPreviousPage}" th:href="@{/bookManage/1}">首页</a>
+        <a th:if="${page.hasPreviousPage}" th:href="@{'/bookManage/'+${page.prePage}}">上一页</a>
+        <span th:each="num:${page.navigatepageNums}">
+            <a th:if="${page.pageNum==num}" style="color: red" th:href="@{'/bookManage/'+${num}}"
+               th:text="'['+${num}+']'"></a>
+            <a th:if="${page.pageNum!=num}" th:href="@{'/bookManage/'+${num}}" th:text="${num}"></a>
+             </span>
+        <a th:if="${page.hasNextPage}" th:href="@{'/bookManage/'+${page.nextPage}}">下一页</a>
+        <a th:if="${page.hasNextPage}" th:href="@{'/bookManage/'+${page.pages}}">尾页</a>
+      </div>
+    </table >
+    <div class="bottom">
+      <div class="w">
+        <div class="top">
+          <ul>
+            <li>
+              <a href="">
+                <img src="../../static/img/bottom1.png" alt="" />
+                <span>大咖级讲师亲自授课</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../static/img/bottom.png" alt="" />
+                <span>课程为学员成长持续赋能</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../static/img/bottom2.png" alt="" />
+                <span>学员真是情况大公开</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <dl>
+            <dt>关于尚硅谷</dt>
+            <dd>教育理念</dd>
+            <!-- <dd>名师团队</dd>
+            <dd>学员心声</dd> -->
+          </dl>
+          <dl>
+            <dt>资源下载</dt>
+            <dd>视频下载</dd>
+            <!-- <dd>资料下载</dd>
+            <dd>工具下载</dd> -->
+          </dl>
+          <dl>
+            <dt>加入我们</dt>
+            <dd>招聘岗位</dd>
+            <!-- <dd>岗位介绍</dd>
+            <dd>招贤纳师</dd> -->
+          </dl>
+          <dl>
+            <dt>联系我们</dt>
+            <dd>http://www.atguigu.com</dd>
+            <dd></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="down">
+        尚硅谷书城.Copyright ©2015
+      </div>
+    </div>
+  </body>
+</html>

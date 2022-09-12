@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.book.mapper.CartMapper">
+<resultMap id="CartItemList" type="CartItem">
+    <id property="id" column="id"></id>
+    <result property="buyCount" column="buyCount"></result>
+    <collection property="userBean" select="com.ssm.book.mapper.UserMapper.getUserById" column="userBean"></collection>
+   <collection property="book" select="com.ssm.book.mapper.BookMapper.getBookById" column="book"></collection>
+</resultMap>
+
+<!--        List<CartItem> getCartItemList(User user);-->
+    <select id="getCartItemList" resultMap="CartItemList">
+        select * from t_cart_item where userBean=#{id}
+    </select>
+<!--    void updateCartItem(CartItem cartItem);-->
+<update id="updateCartItem">
+    update t_cart_item set buyCount=#{buyCount} where id=#{id}
+</update>
+<!--     void addCartItem(CartItem cartItem);-->
+    <insert id="addCartItem">
+        insert into t_cart_item values(#{id},#{book.id},#{buyCount},#{userBean.id})
+    </insert>
+<!--        void deleteAllCartItem();-->
+    <delete id="deleteAllCartItem">
+        delete from t_cart_item
+    </delete>
+<!--           void deleteCartItemById(@Param("id") Integer id);-->
+    <delete id="deleteCartItemById">
+        delete from t_cart_item where id=#{id}
+    </delete>
+</mapper>
