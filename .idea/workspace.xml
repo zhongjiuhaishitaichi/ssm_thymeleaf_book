@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336119ed-a0d6-46e4-b62d-67411c3d6449" name="变更" comment="基于ssm+thymeleaf的书城项目 前端和数据库都是尚硅谷javaweb课程的内容 只是对项目用了ssm框架完成了一些功能,功能不全,完善起来很简单了" />
+    <list default="true" id="336119ed-a0d6-46e4-b62d-67411c3d6449" name="变更" comment="基于ssm+thymeleaf的书城项目 前端和数据库都是尚硅谷javaweb课程的内容 只是对项目用了ssm框架完成了一些功能,功能不全,完善起来很简单了">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,12 +89,14 @@
       <recent name="com.ssm.book.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ssm_thymeleaf_book" />
       <recent name="E:\ssm_thymeleaf_book\src\main\webapp\static\img" />
       <recent name="E:\ssm_thymeleaf_book\src\main\webapp\static\script" />
       <recent name="E:\ssm_thymeleaf_book\src\main\resources" />
       <recent name="E:\ssm_thymeleaf_book\src\main\webapp\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ssm_thymeleaf_book" />
       <recent name="E:\ssm_thymeleaf_book\src\main\resources\com\ssm\book\mapper" />
       <recent name="E:\ssm_thymeleaf_book\src\main\resources" />
     </key>
