@@ -291,7 +291,7 @@
       <workItem from="1662807810117" duration="74000" />
       <workItem from="1662808059474" duration="606000" />
       <workItem from="1662904065113" duration="317000" />
-      <workItem from="1662977081016" duration="357000" />
+      <workItem from="1662977081016" duration="716000" />
     </task>
     <task id="LOCAL-00001" summary="基于ssm+thymeleaf的书城项目 前端和数据库都是尚硅谷javaweb课程的内容 只是对项目用了ssm框架完成了一些功能,功能不全,完善起来很简单了">
       <created>1662977374495</created>
@@ -300,7 +300,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662977374495</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="基于ssm+thymeleaf的书城项目 前端和数据库都是尚硅谷javaweb课程的内容 只是对项目用了ssm框架完成了一些功能,功能不全,完善起来很简单了">
+      <created>1662977498715</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662977498715</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ssm+thymeleaf">
+      <created>1662977713497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662977713497</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
